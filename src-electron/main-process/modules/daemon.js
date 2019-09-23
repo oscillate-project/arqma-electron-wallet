@@ -29,19 +29,19 @@ export class Daemon {
         return new Promise((resolve, reject) => {
             if (process.platform === "win32") {
                 // eslint-disable-next-line no-undef
-                let arqmad_path = path.join(__ryo_bin, "arqmad.exe")
-                let arqmad_version_cmd = `"${arqmad_path}" --version`
-                if (!fs.existsSync(arqmad_path)) { resolve(false) }
-                child_process.exec(arqmad_version_cmd, (error, stdout, stderr) => {
+                let oscillated_path = path.join(__ryo_bin, "oscillated.exe")
+                let oscillated_version_cmd = `"${oscillated_path}" --version`
+                if (!fs.existsSync(oscillated_path)) { resolve(false) }
+                child_process.exec(oscillated_version_cmd, (error, stdout, stderr) => {
                     if (error) { resolve(false) }
                     resolve(stdout)
                 })
             } else {
                 // eslint-disable-next-line no-undef
-                let arqmad_path = path.join(__ryo_bin, "arqmad")
-                let arqmad_version_cmd = `"${arqmad_path}" --version`
-                if (!fs.existsSync(arqmad_path)) { resolve(false) }
-                child_process.exec(arqmad_version_cmd, { detached: true }, (error, stdout, stderr) => {
+                let oscillated_path = path.join(__ryo_bin, "oscillated")
+                let oscillated_version_cmd = `"${oscillated_path}" --version`
+                if (!fs.existsSync(oscillated_path)) { resolve(false) }
+                child_process.exec(oscillated_version_cmd, { detached: true }, (error, stdout, stderr) => {
                     if (error) { resolve(false) }
                     resolve(stdout)
                 })
@@ -121,7 +121,7 @@ export class Daemon {
                 args.push("--stagenet")
             }
 
-            args.push("--log-file", path.join(dirs[net_type], "logs", "arqmad.log"))
+            args.push("--log-file", path.join(dirs[net_type], "logs", "oscillated.log"))
 
             if (daemon.rpc_bind_ip !== "127.0.0.1") { args.push("--confirm-external-bind") }
 
@@ -142,10 +142,10 @@ export class Daemon {
                 if (status === "closed") {
                     if (process.platform === "win32") {
                         // eslint-disable-next-line no-undef
-                        this.daemonProcess = child_process.spawn(path.join(__ryo_bin, "arqmad.exe"), args)
+                        this.daemonProcess = child_process.spawn(path.join(__ryo_bin, "oscillated.exe"), args)
                     } else {
                         // eslint-disable-next-line no-undef
-                        this.daemonProcess = child_process.spawn(path.join(__ryo_bin, "arqmad"), args, {
+                        this.daemonProcess = child_process.spawn(path.join(__ryo_bin, "oscillated"), args, {
                             detached: true
                         })
                     }

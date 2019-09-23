@@ -27,11 +27,11 @@ export class Backend {
 
     init (config) {
         if (os.platform() === "win32") {
-            this.config_dir = "C:\\ProgramData\\arqma"
-            this.wallet_dir = `${os.homedir()}\\Documents\\Arqma`
+            this.config_dir = "C:\\ProgramData\\oscillate"
+            this.wallet_dir = `${os.homedir()}\\Documents\\Oscillate`
         } else {
-            this.config_dir = path.join(os.homedir(), ".arqma")
-            this.wallet_dir = path.join(os.homedir(), "Arqma")
+            this.config_dir = path.join(os.homedir(), ".oscillate")
+            this.wallet_dir = path.join(os.homedir(), "Oscillate")
         }
 
         if (!fs.existsSync(this.config_dir)) {
@@ -47,11 +47,11 @@ export class Backend {
         const daemon = {
             type: "remote",
             p2p_bind_ip: "0.0.0.0",
-            p2p_bind_port: 19993,
+            p2p_bind_port: 11245,
             rpc_bind_ip: "127.0.0.1",
-            rpc_bind_port: 19994,
+            rpc_bind_port: 11246,
             zmq_rpc_bind_ip: "127.0.0.1",
-            zmq_rpc_bind_port: 19995,
+            zmq_rpc_bind_port: 11115,
             out_peers: -1,
             in_peers: -1,
             limit_rate_up: -1,
@@ -62,22 +62,22 @@ export class Backend {
         const daemons = {
             mainnet: {
                 ...daemon,
-                remote_host: "node.supportarqma.com",
-                remote_port: 19994
+                remote_host: "osl.pubnodes.com",
+                remote_port: 11246
             },
             stagenet: {
                 ...daemon,
                 type: "local",
-                p2p_bind_port: 39993,
-                rpc_bind_port: 39994,
-                zmq_rpc_bind_port: 39995
+                p2p_bind_port: 31245,
+                rpc_bind_port: 31246,
+                zmq_rpc_bind_port: 33335
             },
             testnet: {
                 ...daemon,
                 type: "local",
-                p2p_bind_port: 29993,
-                rpc_bind_port: 29994,
-                zmq_rpc_bind_port: 29995
+                p2p_bind_port: 21245,
+                rpc_bind_port: 21246,
+                zmq_rpc_bind_port: 22225
             }
         }
 
@@ -87,11 +87,11 @@ export class Backend {
             app: {
                 data_dir: this.config_dir,
                 wallet_data_dir: this.wallet_dir,
-                ws_bind_port: 19994,
+                ws_bind_port: 11246,
                 net_type: "mainnet"
             },
             wallet: {
-                rpc_bind_port: 19999,
+                rpc_bind_port: 11246,
                 log_level: 0
             },
             market: {
@@ -103,8 +103,8 @@ export class Backend {
                     protocol: "https://",
                     hostname: "api.coingecko.com",
                     port: 443,
-                    coin: "arqma",
-                    endpoint: "/api/v3/coins/arqma/tickers"
+                    coin: "oscillate",
+                    endpoint: "/api/v3/coins/oscillate/tickers"
                 }
             }
         }
@@ -119,8 +119,8 @@ export class Backend {
 
         this.remotes = [
             {
-                host: "node.supportarqma.com",
-                port: "19994"
+                host: "osl.pubnodes.com",
+                port: "11246"
             }
         ]
 
@@ -254,7 +254,7 @@ export class Backend {
             }
 
             if (path) {
-                const baseUrl = net_type === "testnet" ? "https://stageblocks.arqma.com/" : "https://explorer.arqma.com/"
+                const baseUrl = net_type === "testnet" ? "https://stageblocks.oscillate.com/" : "https://explorer.oscillate.com/"
                 const url = `${baseUrl}/${path}/`
                 require("electron").shell.openExternal(url + params.id)
             }

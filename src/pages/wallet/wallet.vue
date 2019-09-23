@@ -8,8 +8,8 @@
         <div class="infoBoxBalance">
             <div class="infoBox">
                 <div class="infoBoxContent">
-                    <q-item-tile label>{{ $t("strings.arqmaBalance") }}</q-item-tile>
-                    <div class="value"><span><FormatArqma :amount="info.balance" /></span></div>
+                    <q-item-tile label>{{ $t("strings.oscillateBalance") }}</q-item-tile>
+                    <div class="value"><span><FormatOscillate :amount="info.balance" /></span></div>
                 </div>
             </div>
         </div>
@@ -19,7 +19,7 @@
         <div class="infoBoxBalance">
             <div class="infoBox">
                 <div class="infoBoxContent">
-                    <q-item-tile label>{{ $t("strings.arqmaExchangeBalance") }}</q-item-tile>
+                    <q-item-tile label>{{ $t("strings.oscillateExchangeBalance") }}</q-item-tile>
                     <div class="value"><span><FormatBitcoin/></span></div>
                 </div>
             </div>
@@ -28,8 +28,8 @@
         <div>
             <div class="infoBox">
                 <div class="infoBoxContent">
-                    <q-item-tile label>{{ $t("strings.arqmaUnlockedBalance") }}</q-item-tile>
-                    <div class="value"><span><FormatArqma :amount="info.unlocked_balance" /></span></div>
+                    <q-item-tile label>{{ $t("strings.oscillateUnlockedBalance") }}</q-item-tile>
+                    <div class="value"><span><FormatOscillate :amount="info.unlocked_balance" /></span></div>
                 </div>
             </div>
         </div>
@@ -336,7 +336,7 @@
 const { clipboard } = require("electron")
 import { mapState } from "vuex"
 import AddressHeader from "components/address_header"
-import FormatArqma from "components/format_arqma"
+import FormatOscillate from "components/format_oscillate"
 import FormatBitcoin from "components/format_bitcoin"
 import TxList from "components/tx_list"
 export default {
@@ -641,7 +641,7 @@ export default {
         }
     },
     components: {
-        FormatArqma,
+        FormatOscillate,
         FormatBitcoin,
         AddressHeader,
         TxList

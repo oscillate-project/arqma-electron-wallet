@@ -31,7 +31,7 @@
     <q-modal minimized ref="aboutModal">
         <div class="about-modal">
 
-            <img class="q-mb-md" src="statics/arqma.svg" height="42" />
+            <img class="q-mb-md" src="statics/oscillate.svg" height="42" />
 
             <p class="q-my-sm">Wallet Version: v{{version}}</p>
             <p class="q-my-sm">Deaemon Version: v{{daemonVersion}}</p>
@@ -41,13 +41,13 @@
 
             <div class="q-mt-md q-mb-lg external-links">
                 <p>
-                    <a @click="openExternal('https://arqma.com/')" href="#">https://arqma.com/</a>
+                    <a @click="openExternal('https://oscillate.com/')" href="#">https://oscillate.com/</a>
                 </p>
                 <p>
-                    <a @click="openExternal('https://telegram.arqma.com')" href="#">Telegram</a> -
-                    <a @click="openExternal('https://chat.arqma.com')" href="#">Discord</a> -
-                    <a @click="openExternal('https://www.reddit.com/r/arqma/')" href="#">Reddit</a> -
-                    <a @click="openExternal('https://github.com/arqma/arqma-electron-wallet')" href="#">Github</a>
+                    <a @click="openExternal('https://telegram.oscillate.com')" href="#">Telegram</a> -
+                    <a @click="openExternal('https://chat.oscillate.com')" href="#">Discord</a> -
+                    <a @click="openExternal('https://www.reddit.com/r/oscillate/')" href="#">Reddit</a> -
+                    <a @click="openExternal('https://github.com/oscillate/oscillate-electron-wallet')" href="#">Github</a>
                 </p>
             </div>
 

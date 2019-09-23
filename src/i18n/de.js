@@ -242,7 +242,7 @@ export default {
         deleteWallet: "Wallet löschen",
         exportWallet: "Export Brieftasche",
         exportTransactions: "Transaktionen exportieren",
-        exit: "Arqma GUI Wallet schliessen",
+        exit: "Oscillate GUI Wallet schliessen",
         importOldGUIWallet: "Wallets von alter GUI importieren",
         manageKeyImages: "Key Images verwalten",
         openWallet: "Wallet öffnen",
@@ -327,7 +327,7 @@ export default {
         warnings: {
             noKeyImageExport: "Keine Key Images zum Exportieren gefunden",
             usingLocalNode: "Zugang zur Remote Node nicht möglich, wechsle zur lokalen Node",
-            usingRemoteNode: "larqmad nicht gefunden, benutze eine Remote Node"
+            usingRemoteNode: "loscillated nicht gefunden, benutze eine Remote Node"
         }
     },
     placeholders: {
@@ -399,10 +399,10 @@ export default {
         editAddressBookEntry: "Adressbucheintrag bearbeiten",
         loading: "Beladung...",
         loadingSettings: "Einstellungen werden geladen",
-        arqmaBalance: "Guthaben",
-        arqmaExchangeBalance: "Guthaben",
-        arqmaUnlockedBalance: "frei verfügbares Guthaben",
-        arqmaUnlockedShort: "frei verfügbar",
+        oscillateBalance: "Guthaben",
+        oscillateExchangeBalance: "Guthaben",
+        oscillateUnlockedBalance: "frei verfügbares Guthaben",
+        oscillateUnlockedShort: "frei verfügbar",
         noTransactionsFound: "Keine Transaktionen gefunden",
         notes: "Notizen",
         numberOfUnspentOutputs: "Anzahl der unspent outputs",

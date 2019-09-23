@@ -1,12 +1,12 @@
 <template>
 <span>
-    {{ value }} ARQ
+    {{ value }} OSL
 </span>
 </template>
 
 <script>
 export default {
-    name: "FormatArqma",
+    name: "FormatOscillate",
     props: {
         amount: {
             required: true

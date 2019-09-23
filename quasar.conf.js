@@ -177,9 +177,9 @@ module.exports = function (ctx) {
             builder: {
                 // https://www.electron.build/configuration/configuration
 
-                appId: "com.arqma.wallet",
-                productName: "Arqma Electron Wallet",
-                copyright: "Copyright © 2018-2019 Arqma Project, 2018 Ryo/Loki Currency Project",
+                appId: "com.oscillate.wallet",
+                productName: "Oscillate Electron Wallet",
+                copyright: "Copyright © 2018-2019 Oscillate Project, 2018 Ryo/Loki Currency Project",
 
                 // directories: {
                 //     buildResources: "src-electron/build"

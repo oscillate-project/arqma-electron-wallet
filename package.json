@@ -1,17 +1,17 @@
 {
-  "name": "arqma-electron-wallet",
+  "name": "oscillate-electron-wallet",
   "version": "2.0.5",
   "daemonVersion": "5.1.1",
-  "description": "Modern GUI interface for Arqma Currency",
-  "productName": "Arqma Electron Wallet",
+  "description": "Modern GUI interface for Oscillate Currency",
+  "productName": "Oscillate Electron Wallet",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arqma/arqma-electron-wallet.git"
+    "url": "https://github.com/oscillate/oscillate-electron-wallet.git"
   },
-  "cordovaId": "com.arqma.wallet",
+  "cordovaId": "com.oscillate.wallet",
   "author": {
-    "name": "Arqma",
-    "email": "support@arqma.com"
+    "name": "Oscillate",
+    "email": "support@oscillate.com"
   },
   "private": true,
   "scripts": {

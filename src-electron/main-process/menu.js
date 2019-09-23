@@ -35,7 +35,7 @@ let template = [
         submenu: [
             {
                 label: "Learn More",
-                click () { require("electron").shell.openExternal("https://arqma.com/") }
+                click () { require("electron").shell.openExternal("https://oscillate.com/") }
             }
         ]
     }
@@ -43,7 +43,7 @@ let template = [
 
 if (process.platform === "darwin") {
     template.unshift({
-        label: "Arqma Electron Wallet",
+        label: "Oscillate Electron Wallet",
         submenu: [
             { role: "about" },
             { type: "separator" },

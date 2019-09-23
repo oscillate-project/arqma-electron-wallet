@@ -1,16 +1,16 @@
 <template>
 <div class="service-node-staking">
     <div class="q-px-md q-pt-md">
-        <ArqmaField :label="$t('fieldLabels.serviceNodeKey')" :error="$v.service_node.key.$error">
+        <OscillateField :label="$t('fieldLabels.serviceNodeKey')" :error="$v.service_node.key.$error">
             <q-input v-model="service_node.key"
                 :dark="theme=='dark'"
                 @blur="$v.service_node.key.$touch"
                 :placeholder="$t('placeholders.hexCharacters', { count: 64 })"
                 hide-underline
             />
-        </ArqmaField>
+        </OscillateField>
 
-        <ArqmaField :label="$t('fieldLabels.amount')" class="q-mt-md" :error="$v.service_node.amount.$error">
+        <OscillateField :label="$t('fieldLabels.amount')" class="q-mt-md" :error="$v.service_node.amount.$error">
             <q-input v-model="service_node.amount"
                 :dark="theme=='dark'"
                 type="number"
@@ -23,7 +23,7 @@
             <q-btn color="secondary" @click="service_node.amount = unlocked_balance / 1e9" :text-color="theme=='dark'?'white':'dark'">
                 {{ $t("buttons.all") }}
             </q-btn>
-        </ArqmaField>
+        </OscillateField>
 
 
 
@@ -53,7 +53,7 @@ import { mapState } from "vuex"
 import { required, decimal } from "vuelidate/lib/validators"
 import { i18n } from "plugins/i18n"
 import { payment_id, service_node_key, greater_than_zero, address } from "src/validators/common"
-import ArqmaField from "components/arqma_field"
+import OscillateField from "components/oscillate_field"
 import WalletPassword from "src/mixins/wallet_password"
 import ServiceNodeUnlock from "components/service_node_unlock"
 
@@ -258,7 +258,7 @@ export default {
     },
     mixins: [WalletPassword],
     components: {
-        ArqmaField,
+        OscillateField,
         ServiceNodeUnlock
     }
 }

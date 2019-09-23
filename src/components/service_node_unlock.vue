@@ -6,7 +6,7 @@
             <q-item v-for="node in service_nodes" :key="node.key">
                 <q-item-main>
                     <q-item-tile class="ellipsis" label>{{ node.key }}</q-item-tile>
-                    <q-item-tile sublabel class="non-selectable">{{ $t('strings.contribution') }}: <FormatArqma :amount="node.amount" /></q-item-tile>
+                    <q-item-tile sublabel class="non-selectable">{{ $t('strings.contribution') }}: <FormatOscillate :amount="node.amount" /></q-item-tile>
                 </q-item-main>
                 <q-item-side>
                     <q-btn
@@ -42,9 +42,9 @@ const objectAssignDeep = require("object-assign-deep");
 import { mapState } from "vuex"
 import { required } from "vuelidate/lib/validators"
 import { service_node_key } from "src/validators/common"
-import ArqmaField from "components/arqma_field"
+import OscillateField from "components/oscillate_field"
 import WalletPassword from "src/mixins/wallet_password"
-import FormatArqma from "components/format_arqma"
+import FormatOscillate from "components/format_oscillate"
 
 export default {
     name: "ServiceNodeUnlock",
@@ -193,8 +193,8 @@ export default {
 
     mixins: [WalletPassword],
     components: {
-        ArqmaField,
-        FormatArqma
+        OscillateField,
+        FormatOscillate
     }
 }
 </script>

@@ -117,8 +117,8 @@ export default {
             protocol: "https://",
             hostname: "api.coingecko.com",
             port: 443,
-            coin: "arqma",
-            endpoint: "/api/v3/coins/arqma/tickers"
+            coin: "oscillate",
+            endpoint: "/api/v3/coins/oscillate/tickers"
         }
     }
 }
